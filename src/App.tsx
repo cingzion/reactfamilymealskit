@@ -1,14 +1,16 @@
-import React from 'react';
+import * as React from 'react';
+import { Button } from 'antd';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
 
-function App() {
+const App = React.memo((): any => {
+  const hello: string = "Jean";
   return (
-    <div className="App">
+    <div className={styles.App}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload. {hello} <Button type="primary" ghost>Button</Button>  
         </p>
         <a
           className="App-link"
@@ -21,6 +23,6 @@ function App() {
       </header>
     </div>
   );
-}
+});
 
 export default App;
