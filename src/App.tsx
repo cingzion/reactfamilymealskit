@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Button } from 'antd';
+import { Home } from './pages/Index';
 import logo from './logo.svg';
 import styles from './App.module.scss';
 
@@ -7,6 +8,7 @@ const App = React.memo((): any => {
   const hello: string = "Jean";
   return (
     <div className={styles.App}>
+       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +22,7 @@ const App = React.memo((): any => {
         >
           Learn React
         </a>
+         <Home />
       </header>
     </div>
   );
